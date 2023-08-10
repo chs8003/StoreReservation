@@ -1,0 +1,237 @@
+html{
+    height: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.head{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+.Home{
+    width: 30%;
+    height: 100%;
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+}
+.HomeImg{
+    background-image: url(/img/Home.png);
+    width: 40px;
+    height: 40px;
+    background-size:cover;
+    cursor: pointer;
+}
+.HomeName{
+    width: 80px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    text-shadow:0px 1px 1px #000;
+}
+
+.Logo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 30%;
+    right: 30%;
+}
+.LogoImg{
+    background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 100%;
+    background-size: 180px;
+    margin: auto;
+}
+
+.Side{
+    width: 30%;
+    height: 100%;
+    margin-right: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.IconZone,.IconZone2{
+    width: 60px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s cubic-bezier(0,0,.5,1);
+    cursor: pointer;
+}
+.IconZone2{
+    margin-left: 10px;
+}
+.IconText{
+    width: 100%;
+    height: 20px;   
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+.Phone{
+    background: url("/img/Telephone.png") no-repeat center center / 100px 90px;
+}
+.Alarm{
+    background: url("/img/Alarm.png") no-repeat center center / 100px 90px;
+}
+.Customer{
+    background: url("/img/Customer.png") no-repeat center center / 100px 90px;
+}
+.Help{
+    background: url("/img/Help.png") no-repeat center center / 100px 90px;
+}
+.Option{
+    background: url("/img/Option.png") no-repeat center center / 100px 90px;
+}
+.logout{
+    background: url("/img/logout.png") no-repeat center center / 100px 90px;
+}
+.Phone, .Alarm, .Customer, .Help, .Option, .outout{
+    width: 100%;
+    height: 80%;
+    background-size: 45px;
+    cursor: pointer;
+}
+
+.IconZone:hover,
+.IconZone2:hover{
+    width: 65px;
+    height: 80px;
+}
+
+.body{  
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.first,.second,.third{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 97%;
+    position: relative;
+    background-color: #FAD0C9;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    transition: all .3s cubic-bezier(0,0,.5,1);
+    cursor: pointer;
+}
+.second, .third{
+    margin-left: 60px;
+}
+
+.FirstBox,.SecondBox,.ThirdBox{
+    width: 430px;
+    height: 527px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.FirstImg{
+    background: url("/img/Line.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 40%;
+    background-size: 180px;
+}
+.SecondImg{
+    background: url("/img/Store.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 40%;
+    background-size: 180px;
+}
+.ThirdImg{
+    background: url("/img/Review.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 40%;
+    background-size: 180px;
+}
+
+.FirstText,.SecondText,.ThirdText{
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 20px;
+    color: white;
+    text-shadow:0px 1px 1px #000;
+}
+
+.under{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.OnText,.OffText,.RightText{
+    font-weight: 700;
+    font-size: 30px;
+    color: black;
+    text-shadow:0px 1px 1px #000;
+    margin-left: 10px;
+}
+
+.Left,.Right{
+    width: 47%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s cubic-bezier(0,0,.5,1);
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.LeftImg{
+    background-image: url(/img/Calender.png);
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+}
+.RightImg{
+    background-image: url(/img/Message.png);
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+}
+
+.Middle{
+    margin: 0px 20px;
+}
+
+.first:hover,
+.second:hover,
+.third:hover{
+    width: 31%;
+    height: 98%;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+    transform: scale3d(1.01,1.01,1.01);
+}
+
+.Right:hover,
+.Left:hover{
+    background-color: #FAD0C9;
+}
