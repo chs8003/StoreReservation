@@ -1,0 +1,1494 @@
+body {
+  margin: 0;
+}
+body button{
+  padding:0px;
+}
+
+.socialLogin_phone{
+  display: none;
+  position: absolute;
+  width: 50%;
+  height: 20%;
+  background-color: aquamarine;
+  top: 40%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.phone_title{
+  height: 20%;
+  font-weight: 700;
+  border-bottom: 3px solid black;
+  line-height: 100%;
+  padding-left: 20px;
+}
+.phone_input{
+  height: 70%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.phone_input input{
+  height: 50%;
+  width: 100%;
+  outline: none;
+  border: 0;
+  border-radius: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.phone_submit{
+  position: absolute;
+  right: 36px;
+}
+.phone_submit button{
+  border:0;
+  outline: none;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: coral;
+}
+
+.mapWapper{
+  position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    top: 29%;
+    left: 58%;
+    width: 30%;
+    height: 33%;
+    z-index: 999;
+}
+.maptitle{
+
+  height: 10%;
+}
+.maptitle p{
+  margin:0;
+
+
+}
+.mapInner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#staticMap{
+  position: absolute;
+  width:100%;
+  height:90%;
+  z-index: 999;
+}
+#staticMap img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+}
+.mp_wap {
+  position: absolute;
+  top: 53%;
+  left: 10%;
+}
+
+
+/* header CSS */
+.header {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+
+}
+
+.headerWapper {
+  height: 100%;
+}
+
+.headerInner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.headerLogo {
+  display: flex;
+  flex-basis: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  padding-right: 5px;
+  width: 140px;
+  height: 100%;
+}
+
+.logo a {
+  background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+  width: 100%;
+  height: 100%;
+  background-size: 130px;
+  transition: all 0.5s ease;
+}
+
+.headerSearch {
+  display: flex;
+  align-items: center;
+  flex-basis: 46%;
+  width: 100%;
+  height: 100%;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.search_box_moblie{
+  display: none;
+}
+
+.searchForm .search {
+  outline: none;
+  width: 315px;
+  height: 20px;
+  border-style: none;
+  background-color: #f8f8f8;
+  padding: 10px 40px 10px 0px;
+  margin: 3px 0px 3px 15px;
+  transition: all 0.5s ease;
+}
+
+.searchIcon {
+  position: relative;
+  right: 20px;
+  display: inline;
+}
+
+.searchIcon_moblie{
+  display: none;
+}
+
+
+
+.headerUtil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+  width: 100%;
+  height: 100%;
+}
+
+.headerUtil_toggleBar {
+  display: none;
+}
+
+.utilList {
+  display: flex;
+  margin-top: 5px;
+}
+
+.utilList_login,
+.utilList_User {
+  padding-right: 20px;
+}
+
+.toggleOn {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: white;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.toggleOn>* {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.login:hover ,.Myinfo:hover ,.logout:hover{
+  /* border: 2px solid black; */
+  color:#ba68c8;
+}
+
+/* infoBar CSS */
+#InfoBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 113px 0px 22px 0px;
+  align-items: center;
+}
+
+.infoWapper {
+  width: 100%;
+  display: flex;
+  height: 110px;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.RestaurantName {
+  display: flex;
+  align-items: center;
+  margin-right: 64px;
+}
+
+.RestaurantName p {
+  word-break: keep-all;
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.InfoMenu {
+  display: flex;
+  width: 500px;
+  height: 100%;
+  align-items: center;
+
+}
+
+.call {
+  background: url(/img/phone.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.call:hover,
+.memberChange:hover,
+.map:hover,
+.wait:hover,
+.cancel:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.call:hover {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.memberChange:hover {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: cover;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.memberChange {
+  background: url(/img/people.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.map {
+  background: url(/img/map.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.wait {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wait .Num {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.button2 {
+  background: url(/img/cancel.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  font-weight: 700;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cancel text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#slideshow-container .mySlides img {
+  height: 400px;
+  transition: all .5s ease;
+}
+
+#slideshow-container {
+  position: relative;
+  height: 400px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 55px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 38px;
+  margin: 0 2px;
+  background-color: white;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+
+.active,
+.dot:hover {
+  background-color: red;
+}
+
+
+.quickfilter {
+  position: absolute;
+  width: 83%;
+  top: 85px;
+  left: 50%;
+  translate: -50%;
+  margin-top: 516px;
+  transition: all 0.5s ease;
+}
+
+.localname {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+
+.quickfilter .filterBar_Names button {
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filterBar_Names {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  position: absolute;
+  left: 0;
+  top: -86px;
+}
+
+.myplaceIcon {
+  margin-right: 5px;
+}
+
+.menuIcon {
+  margin-right: 5px;
+}
+.filterRegion{
+  height: 120px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 0px 5px 9px 1px;
+  border-radius: 0px 10px 10px 10px;
+  transition: all 0.5s ease;
+}
+.place{
+  width: 100%;
+}
+.nowplace{
+  display: flex;
+}
+
+.place button {
+  padding: 5px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.selfplace {
+  display: inline;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.doo {
+  display: inline;
+  padding-bottom: 5px;
+  width: 128%;
+  justify-content: center;
+  border-bottom: 2px solid #5c5f67;
+}
+
+.doo .example {
+  display: inline;
+  color: #aaa;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.doo .dooicon {
+  display: inline;
+  padding-left: 15px;
+  margin-bottom: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+@keyframes show-region {
+  0%{
+    margin-left: 15px;
+  }
+  100%{
+    margin-left: 5px;
+  }
+}
+.subicon{
+  width: 100%;
+  display: inline;
+  align-items: center;
+  margin-left: 15px;
+  animation: show-region .5s ease infinite alternate;
+}
+.subicon p {
+  font-size: 10px;
+    margin: 0px;
+    display: inline;
+    width: 100%;
+    padding-left: 5px;
+}
+
+
+.si {
+  display: flex;
+  width: 100%;
+  margin-right: 40px;
+  justify-content: center;
+  border-bottom: 2px solid #5c5f67;
+}
+
+.si input {
+  border: none;
+  font-size: 26px;
+  width: 85%;
+  outline: none;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.si .siicon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.filterRegion .find {
+  position: absolute;
+  right: 9%;
+  width: 100px;
+  height: 56px;
+  background: none;
+  border: none;
+  background-color: #ddd;
+  border-radius: 3px;
+  font-size: 30px;
+  transition: all 0.5s ease;
+}
+
+.filterMenu {
+  height: 120px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.korea,
+.japen,
+.china,
+.america,
+.france,
+.italy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.base {
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: column;
+  background-color: wheat;
+  border: 5px solid black;
+  margin-top: 10px;
+
+}
+
+.base .storeName {
+  font-size: 30px;
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.storeName .distance {
+  margin-right: 30px;
+}
+
+.base p {
+  display: inline-block;
+  margin-left: 62px;
+}
+
+.base .placeURL {
+  margin-left: 62px;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* 지역 세부 선텍 CSS */
+* li, ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.outerRegion{
+  position: relative;
+  background-color: white;
+  width: 75%;
+  border: 1px solid #999;
+  margin:0 auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.innerRegion{
+  display: flex;
+  width: 70%;
+  margin: 15px;
+  border: 1px solid #999;
+}
+.Region_doo{
+  display: flex;
+  width: 100px;
+  justify-content:center;
+}
+.Region_doo ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #dbf4ff;
+}
+.doo_color{
+  background-color: white;
+}
+.Region_doo li{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px 0px;
+}
+.Region_si{
+  width: 100%;
+}
+.Region_si ul{
+  margin-left: 20px;
+}
+.Region_si label{
+    display: flex;
+    align-items: center;
+    height: 12px;
+    padding-left: 14px;
+    padding:10px 0px;
+    margin:10px 0px
+}
+
+.buttonRegion{
+  width: 30%;
+    display: block;
+    position: relative;
+}
+.resetbutton{
+  position: absolute;
+  display: flex;
+  top: 10%;
+}
+.fa-rotate:before, .fa-sync-alt:before{
+  margin-right: 5px;
+}
+.findRegion{
+  position: absolute;
+    font-size: 25px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ddd;
+    width: 100px;
+    top: 76%;
+    right: 25%;
+}
+
+
+/* 애니메이션 효과 */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+.movein {
+  animation-name: movein;
+  animation-duration: 0.65s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movein {
+  from {
+    margin-top: 516px;
+  }
+
+  to {
+    margin-top: 200px;
+  }
+}
+
+.moveout {
+  animation-name: moveout;
+  animation-duration: 0.65s;
+  animation-fill-mode: forwards;
+
+
+}
+
+@keyframes moveout {
+  from {
+    margin-top: 200px;
+  }
+
+  to {
+    margin-top: 516px;
+  }
+}
+
+
+
+.blurin {
+  animation: blurin 0.65s forwards;
+}
+
+@keyframes blurin {
+  from {
+    filter: blur(0px);
+  }
+
+  to {
+    filter: blur(6px);
+  }
+}
+
+.blurout {
+  animation: blurout 0.65s forwards;
+}
+
+@keyframes blurout {
+  from {
+    filter: blur(6px);
+  }
+
+  to {
+    filter: blur(0px);
+  }
+}
+
+.Store_Zone {
+  position: absolute;
+  width: 60%;
+  left: 60%;
+  translate: -69%;
+  margin-top: 215px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  transition: all .5s ease;
+  justify-content: center;
+}
+
+.Sign {
+  height: 180px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 10px 10px 10px;
+  justify-content: space-between;
+}
+
+.CloseSign {
+  position: relative;
+  height: 180px;
+  display: flex;
+  background-color: rgb(209, 209, 209);
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 10px 10px 10px;
+  justify-content: space-between;
+}
+
+.bad{
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaa;
+  background: #f1f1f1;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1.4;
+  padding: 15px 15px;
+}
+.bad p{
+  font-size: 20px;
+  margin: 0;
+}
+
+.Store_Sign {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Store_Image {
+  display: flex;
+  width: 100px;
+  height: 150px;
+  margin-right: 30px;
+  background-image: url('/img/Store_Image.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Store_Title {
+  font-size: 25px;
+  font-weight: 700;
+  word-break: break-word;
+  line-height: 1.4;
+  margin: 0px 0px 5px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.detail {
+  font-size: 14px;
+  word-break: keep-all;
+  line-height: 15px;
+  margin: 0px 0px 10px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.rating > *{
+  font-size: 13px;
+}
+
+.Star_Rating {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Review_Rating {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+}
+
+.tags,
+.address {
+  word-break: keep-all;
+  font-size: 12px;
+  line-height: 15px;
+  color: #999;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.Facilities {
+  display: flex;
+  margin-left: 30px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.Facilities .fa-solid {
+  font-size: 40px;
+}
+
+.Facilities p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.store {
+  margin-bottom: 20px;
+}
+
+.WaitingBox {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: inherit;
+  width: 70px;
+  height: 86px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+/* PC 반응형 */
+@media screen and (max-width: 1024px) {
+  .headerInner {
+    transform: scale(0.95);
+  }
+
+  .infoWapper {
+    transform: scale(0.9);
+  }
+
+  .RestaurantName p {
+    font-size: 30px;
+  }
+
+  .InfoMenu {
+    width: 500px;
+  }
+
+  .dot {
+    width: 30px;
+  }
+
+  .prev,
+  .next {
+    font-size: 30px;
+  }
+
+  .place button {
+    font-size: 25px;
+  }
+
+  .doo input,
+  .si input {
+    font-size: 21px;
+  }
+
+  .doo .dooicon,
+  .si .siicon {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .filterRegion .find {
+    width: 85px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .header {
+    height: 60px;
+  }
+  #InfoBar{
+    padding-top: 80px;
+    flex-direction: column;
+  }
+  .toggleOn {
+    border-top: 2px solid #ddd;
+  }
+
+  .headerUtil {
+    display: none;
+  }
+  .headerUtil_toggleBar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    font-size: 20px;
+  }
+
+  .filterRegion .find {
+    width: 20%;
+    font-size: 17px;
+    height: 25%;
+}
+  
+
+  .logo a {
+    background-size: 105px;
+  }
+  .searchIcon_moblie{
+    display: flex;
+    position: absolute;
+    right: 11%;
+    margin-right: 13px;
+  }
+
+  .searchForm{
+    display: none;
+  }
+
+  
+
+  .search_box_moblie{
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    transition: height 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  
+.search_box_wrapper{
+  height: 100%;
+  padding: 30px;
+  width: 100%;
+}
+  
+
+  .searchForm_moblie{
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .search_moblie{
+
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    width: 60%;
+    border: none;
+    height: 1rem;
+  }
+
+
+  .searchIcon_box_icon{
+    position: absolute;
+    right: 25%;
+  }
+
+  .infoWapper {
+    height: 90px;
+  }
+
+  .InfoMenu {
+    width: 250px;
+  }
+
+  .InfoMenu>* {
+    height: 46px;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .RestaurantName p {
+    font-size: 20px;
+  }
+
+  .RestaurantName {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  #slideshow-container{
+    height: 250px;
+  }
+
+  #slideshow-container .mySlides img {
+    height: 250px;
+}
+
+  .quickfilter {
+    top: -78px;
+  }
+
+  .filterRegion , .filterMenu{
+    height: 90px;
+    padding: 20px 30px;
+  }
+
+
+  .place{
+    width: 70%;
+  }
+
+  .quickfilter .filterBar_Names button {
+    padding: 0px;
+    font-size: 15px;
+  }
+
+  .filterBar_Names {
+    top: -50px;
+  }
+
+  .mp_wap{
+    display: none;
+  }
+
+  .place button {
+    font-size: 15px;
+  }
+
+  .doo input,
+  .si input {
+    font-size: 15px;
+  }
+
+  .doo .dooicon,
+  .si .siicon {
+    font-size: 18px;
+  }
+
+  .doo .example {
+    font-size: 17px;
+  }
+
+  .subicon{
+    display: none;
+  }
+
+  
+
+
+  .Store_Zone {
+    position: relative;
+    left: 0;
+    translate: 0;
+    width: 100%;
+    margin-top: 165px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .store{
+    width: 44%;
+    margin: 10px;
+}
+
+.CloseSign ,.Sign{
+  padding:0px;
+  justify-content: center;
+  height: 100%;
+}
+
+.Store_Sign{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.Store_Image{
+  width: 100%;
+  margin-right: 0px;
+  border-radius: 10px;
+}
+
+.Store_Name{
+  padding: 7px;
+  display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.Store_Title {
+  font-size: 14px;
+}
+
+.detail {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.rating > *{
+  font-size: 12px;
+
+}
+
+.rating{
+  margin-bottom: 5px;
+}
+
+.address{
+  display: none;
+}
+
+.tags{
+  font-size: 12px;
+}
+
+.WaitingBox{
+  height: 34px;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.bad, .WaitingBox{
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+  padding: 5px;
+}
+
+
+
+.WaitingBox > P{
+  margin:0;
+}
+
+.bad > P{
+  font-size: 12px;
+}
+
+
+  .localname {
+    font-size: 18px;
+    word-break: keep-all;
+  }
+
+  .filterMenu img{
+    width: 30px;
+  }
+
+  .filterMenu p{
+    font-size: 13px;
+  }
+
+  .Region_doo a{
+    font-size: 13px;
+  }
+
+  .Region_doo li{
+    padding:10px 0px;
+  }
+
+  .Region_si label{
+    font-size: 13px;
+    padding: 4px 0px;
+  }
+
+  .resetbutton{
+    font-size: 13px;
+    top: 12%;
+  }
+
+  .findRegion{
+    font-size: 20px;
+    width: 55px;
+    top:71%
+  }
+
+  @keyframes movein {
+    from {
+      margin-top: 516px;
+    }
+  
+    to {
+      margin-top: 300px;
+    }
+  }
+  
+  .moveout {
+    animation-name: moveout;
+    animation-duration: 0.65s;
+    animation-fill-mode: forwards;
+  
+  
+  }
+  
+  @keyframes moveout {
+    from {
+      margin-top: 300px;
+    }
+  
+    to {
+      margin-top: 516px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo a {
+    background-size: 90px;
+  }
+
+  .searchForm .search {
+    width: 100%;
+    height: 5px;
+  }
+
+  
+
+  
+
+  #slideshow-container .mySlides img {
+    height: 300px;
+  }
+
+  .prev,
+  .next {
+    top: 34%;
+    font-size: 25px;
+  }
+
+  .dot {
+    width: 23px;
+  }
+
+  .quickfilter {
+    top: -63px;
+  }
+
+  .filterRegion {
+    height: 50px;
+    width: 72%;
+  }
+
+  .quickfilter .filterBar_Names button {
+    font-size: 14px;
+  }
+
+  .filterBar_Names {
+    top: -44%;
+  }
+
+  .place button {
+    font-size: 17px;
+    margin-bottom: 13px;
+  }
+
+  .selfplace {
+    width: 100%;
+  }
+
+  .doo {
+    display: flex;
+    width: 100%;
+    margin-right: 10px;
+    justify-content: center;
+    border-bottom: 2px solid #5c5f67;
+  }
+
+  .doo input,
+  .si input {
+    font-size: 12px;
+  }
+
+  .doo .dooicon,
+  .si .siicon {
+    font-size: 15px;
+  }
+
+  .Store_Zone {
+    margin-top: 15px;
+  }
+
+  .Sign {
+    height: 131px;
+    padding: 0px 23px;
+  }
+
+  .Store_Image {
+    height: 80px;
+  }
+
+  .Store_name {
+    font-size: 10px;
+  }
+
+  .Store_Title {
+    font-size: 12px;
+  }
+
+  .rating>*,
+  .tags,
+  .address {
+    font-size: 9px;
+  }
+
+  .Store_Name {
+    height: 100%;
+    line-height: .3;
+  }
+
+  .filterRegion .find {
+    width: 70px;
+    font-size: 14px;
+    height: 29px;
+  }
+
+  .localname {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+}
