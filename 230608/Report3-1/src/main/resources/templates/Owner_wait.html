@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ownerpage/Owner_wait.css" />
+
+    <script defer src="/js/ownerpage/Owner_wait_db.js" type="module"></script>
+    <script defer src="/js/ownerpage/Owner_wait.js" type="module"></script>
+
+    <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>대기 명단 관리 - 푸드잇</title>
+</head>
+
+<body>
+  <section class="head">
+    <div class="Home">
+      <span class="HomeImg" href="#" onclick="location.href='/Owner_Main'"></span>
+      <span class="HomeName"></span>
+    </div>
+    <div class="Logo">
+      <span class="LogoImg"></span>
+    </div>
+    <div class="Side">
+      <div class="IconZone">
+        <span class="Phone"></span>
+        <span class="IconText">전화</span>
+      </div>
+      <div class="IconZone2">
+        <span class="Alarm"></span>
+        <span class="IconText">알림</span>
+      </div>
+      <div class="IconZone2">
+        <span class="Customer"></span>
+        <span class="IconText">고객</span>
+      </div>
+      <div class="IconZone2">
+        <span class="Option"></span>
+        <span class="IconText">설정</span>
+      </div>
+      <div class="IconZone2 logout2">
+        <span class="logout2"></span>
+        <span class="IconText">로그아웃</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="body">
+    <div class="details">
+      <div class="Top">
+        <div class="WaiterInfo">
+          <div class="LeftInfo">
+            <span class="WaiterName">조승준</span>
+          </div>
+          <div class="RightInfo">
+            <span class="X-image"></span>
+          </div>
+        </div>
+      </div>
+      <div class="Middle">
+        <div class="VisitDate">
+          <span class="VisitText">대기 등록 시간</span>
+          <br />
+          <span class="DateText">2023년 03월 24일 금요일 오후 5시 30분</span>
+        </div>
+        <div class="VisitPhone">
+          <span class="PhoneText">전화 번호</span>
+          <br />
+          <span class="NumText">010-8964-9828</span>
+        </div>
+        <div class="VisitPeople">
+          <span class="PeopleText">인원 수</span>
+          <br />
+          <span class="PeopleNumText">2명</span>
+        </div>
+        <div class="BlackPeople">
+          <span class="BlackText">블랙리스트 등록 사유</span>
+          <br />
+          <span class="BlackContent">술 마시고 식당에서 종업원과 싸움</span>
+        </div>
+      </div>
+      <div class="Under">
+        <div class="AllBtn">
+          <div class="LeftBtn">
+            <button class="ReserveBtn">대기 목록 삭제</button>
+          </div>
+          <div class="RightBtn">
+            <button class="unlockBtn">블랙리스트 등록</button>
+            <button class="lockBtn">블랙리스트 해제</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="wait">
+      <tr>
+        <th class="Number">대기 번호</th>
+        <th class="Name">이름</th>
+        <th class="Men">인원 수</th>
+        <th class="PhoneNum">전화 번호</th>
+      </tr>
+    </table>
+  </section>
+  <form action="" class="blackBox">
+    <div class="modal">
+      <div class="modal-title">
+        <span>블랙리스트 등록</span>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-contents">
+        <div class="BlackInfo">
+          <div class="BlackName">
+            <p>이름:&nbsp;</p>
+            <p class="NameText">조승준</p>
+          </div>
+          <div class="BlackPhone">
+            <p>전화 번호:&nbsp;</p>
+            <p class="PhoneNumText">010-8964-9828</p>
+          </div>
+          <textarea required name=content class="BlackInput" placeholder="사유를 입력하세요."></textarea>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <input class="BlackBtn" type="submit" value="등록하기" />
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

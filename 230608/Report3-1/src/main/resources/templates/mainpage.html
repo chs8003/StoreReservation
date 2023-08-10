@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>푸드잇 - 슬기로운 맛집 생활</title>
+  <link rel="stylesheet" href="/css/mainpage/mainpage.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ed2e5b79aa9ce5e35416196fea2b23b&libraries=services"></script>
+
+
+
+  
+   <script defer src="/js/mainpage/mainpage.js" ></script>
+  <script defer src="/js/mainpage/filter.js" ></script>
+  <script defer src="/js/mainpage/myplace.js"></script>
+  <script defer src="/js/mainpage/storeList.js"></script>
+   <script defer src="/js/mainpage/mainDB.js"></script>
+    <script defer src="/js/mainpage/inputPassword.js"></script>
+     <script defer src="/js/mainpage/RegionFilter.js"></script>
+      <script defer src="/js/mainpage/map.js"></script>
+
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ed2e5b79aa9ce5e35416196fea2b23b"></script>
+</head>
+
+<body>
+  <div class="mapWapper" style="display: none;">
+    <div class="mapInner">
+      <div class="maptitle">
+        <p>매장 위치 & 길찾기</p>
+      </div>
+      <div id="staticMap"></div>
+    </div>
+  </div>
+
+  <div class="socialLogin_phone">
+    <div class="phone_title">
+      <p>전화번호를 입력하세요</p>
+    </div>
+    <div class="phone_input">
+      <input type="tel" placeholder="예) 010-1234-5678" oninput="Inputpassword(this)" maxlength="13">
+      </input>
+      <div class="phone_submit">
+        <button type="button" onclick="submitpassword()">등록하기</button>
+      </div>
+    </div>
+  </div>
+  <div id="wrap">
+    <section class="header">
+      <div class="headerWapper">
+        <div class="headerInner">
+          <div class="headerLogo">
+            <div class="logo">
+              <a href="#" onclick="location.href='/mainpage'"></a>
+            </div>
+          </div>
+          <div class="headerSearch">
+            <form class="searchForm">
+              <input type="text" class="search" placeholder="식당을 입력하세요" />
+              <div class="searchIcon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </form>
+            <div class="iconBox"></div>
+          </div>
+          <div class="headerUtil">
+            <div class="utilList">
+              <div class="utilList_login">
+                <i class="fa-regular fa-user" style="font-size: 25px"
+                  onclick="location.href='/login'"></i>
+              </div>
+              <div class="UserInfo">
+                <div class="utilList_User"></div>
+              </div>
+              <form class="formps" action="/logout" method="post"></form>
+            </div>
+          </div>
+          <div class="headerUtil_toggleBar" onclick="showList()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+      <div class="toggleOn">
+
+      </div>
+      <div class="search_box_moblie">
+        <div class="search_box_wrapper">
+          <form class="searchForm_moblie">
+            <input type="text" class="search_moblie" placeholder="식당을 입력하세요" />
+            <div class="searchIcon_box_icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- 현재 사용자 선택 옵션 -->
+    <section id="InfoBar">
+      <div class="RestaurantName">
+        <p>식당을 골라주세요!</p>
+      </div>
+      <div class="InfoMenu">
+        <div class="call"></div>
+        <div class="memberChange"></div>
+        <div class="map" onclick="findmap()"></div>
+        <div class="wait">
+          <div class="Num">-</div>
+        </div>
+        <div class="button2"></div>
+        
+      </div>
+
+    </section>
+    <!-- 슬라이드 이미지 -->
+    <section id="slideshow-container">
+      <div class="mySlides fade">
+        <img src="/img/mainpage/slide_img1.png" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/img/mainpage/slide_img2.png" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/img/mainpage/slide_img3.png" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/img/mainpage/slide_img4.png" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/img/mainpage/slide_img5.png" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/img/mainpage/slide_img6.png" style="width: 100%" />
+      </div>
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+      <div class="mp_wap">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+     </section>
+    <section class="quickfilter">
+      <div class="filterBar_Names">
+        <button class="myplace" style="background-color: #ffffff;">
+          <div class="myplaceIcon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <p>지역</p>
+        </button>
+        <button class="menu" style="background-color:#da9c68bf">
+          <div class="menuIcon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <p>메뉴</p>
+        </button>
+      </div>
+      <div class="filterRegion">
+        <div class="place">
+          <button class="nowplace">내위치</button>
+          <div class="selfplace">
+            <div class="doo">
+              <div class="example">예) 경기도 수원시</div>
+              <div class="dooicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            </div>
+            <div class="subicon">
+              <i class="fa-sharp fa-regular fa-circle-left" style="color: #f24a4a;"></i>
+              <p>지역을 직접 선택하세요!</p>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="find">조회</button>
+      </div>
+      <div class="filterMenu" style="display:none">
+        <div class="korea">
+          <div class="imgKorea" id="sortedMenu">
+            <img src="/img/kor.png" alt="kor">
+          </div>
+          <p>한식</p>
+        </div>
+        <div class="japen">
+          <div class="imgJapen" id="sortedMenu">
+            <img src="/img/japen.png" alt="jap">
+          </div>
+          <p>일식</p>
+        </div>
+        <div class="china">
+          <div class="imgChina" id="sortedMenu">
+            <img src="/img/china.png" alt="chi">
+          </div>
+          <p>중식</p>
+        </div>
+        <div class="america">
+          <div class="imgAmerica" id="sortedMenu">
+            <img src="/img/america.png" alt="america">
+          </div>
+          <p>미국식</p>
+        </div>
+        <div class="france">
+          <div class="imgfrance" id="sortedMenu">
+            <img src="/img/france.png" alt="France">
+          </div>
+          <p>프랑스식</p>
+        </div>
+        <div class="italy">
+          <div class="imgItaly" id="sortedMenu">
+            <img src="/img/italy.png" alt="italy">
+          </div>
+          <p>이탈리아식</p>
+        </div>
+      </div>
+      <div class="outerRegion" style="display: none;">
+        <div class="innerRegion">
+          <div class="Region_doo">
+            <ul>
+              <li data-region="seoul">
+                <a>서울</a>
+              </li>
+              <li data-region="gyeonggi">
+                <a>경기</a>
+              </li>
+              <li data-region="incheon">
+                <a>인천</a>
+              </li>
+            </ul>
+          </div>
+          <div class="Region_si">
+            <ul data-region="seoul">
+              <li>
+                <label>
+                  <input type="checkbox" name="region">강서구
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">강동구
+                </label>
+              </li>
+            </ul>
+            <ul data-region="gyeonggi">
+              <li>
+                <label>
+                  <input type="checkbox" name="region">안양시
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">수원시
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">김포시
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">안산시
+                </label>
+              </li>
+            </ul>
+            <ul data-region="incheon">
+              <li>
+                <label>
+                  <input type="checkbox" name="region">부평구
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">연수구
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="buttonRegion">
+          <div class="resetbutton">
+            <i class="fa-solid fa-rotate" style="color: #f9c148;">초기화</i>
+          </div>
+          <button class="findRegion">조회</button>
+        </div>
+      </div>
+    </section>
+    <section class="mainSection">
+      <section class="Store_Zone"></section>
+    </section>
+  </div>
+  <br />
+
+</body>
+
+</html>

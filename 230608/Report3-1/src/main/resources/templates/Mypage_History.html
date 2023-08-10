@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문 목록 - 푸드잇</title>
+    <link rel="stylesheet" href="/css/mypage/Mypage_History.css" />
+    <script defer src="/js/mypage/Mypage_History.js"></script>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="SideBar">
+            <div class="Title_Area">
+                <div class="headerLogo">
+                    <div class="logo">
+                        <a href="#" onclick="location.href='/mainpage'"></a>
+                        <h1 class="Title">내정보</h1>
+                    </div>
+                </div>
+            </div>
+           <form action="/Mypage_Account/profile" enctype="multipart/form-data" method="post">
+            <div class="Profile_Area">
+                <div class="Profile_Inner">
+                    <div class="Photo">
+                        <img th:src="@{/image/__${infoImage}__}"  alt="profile_image" class="Profile_Image" onerror="this.src='/img/Profile.png'">
+                    </div>
+                    <div class="Profile">
+                        <p class="UserName" th:text="${infoName}"></p>
+                        <p class="UserEmail"th:text="${infoEmail}"></p>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <div class="Menu_Area">
+            <li>
+                    <a href="#" onclick="location.href='/Mypage_Account'">
+                        <div class="Menu" >정보수정</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Fav'">
+                        <div class="Menu">즐겨찾기</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Review'">
+                        <div class="Menu">리뷰목록</div>
+                    </a>
+                </li>
+                
+                <li class="Act">
+                    <a href="#" onclick="location.href='/Mypage_History'">
+                        <div class="Menu_Act">방문목록</div>
+                    </a>
+                </li>
+               
+            </div>
+    </div>
+    <div class="historyBox">
+    </div>
+    <form class=" reviewBox">
+        <div class="modal">
+            <div class="modal-title">
+                <div class="userName">
+                    <span>리뷰 등록</span>
+                    <p class="userInfo"></p>
+                    <p class="NameText"></p>
+                </div>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-contents">
+                <fieldset>
+                    <span class="text-bold">별점을 선택해주세요</span>
+                    <div class="star">
+                        <input type="radio" name="rating" value="5" id="rate5"><label for="rate5">★</label>
+                        <input type="radio" name="rating" value="4" id="rate4"><label for="rate4">★</label>
+                        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">★</label>
+                        <input type="radio" name="rating" value="2" id="rate2"><label for="rate2">★</label>
+                        <input type="radio" name="rating" value="1" id="rate1"><label for="rate1">★</label>
+                    </div>
+                </fieldset>
+                <div class="PhotoContent">
+                    <div>
+                        <img src="" alt="Review_img" class="Review_img">
+                    </div>
+                    <input type="file" name="file" accept="image/*" class="Upload">
+                    <p>사진을 올려주세요</p>
+                </div>
+                <div class="ReviewContent">
+                    <textarea required class="content" name="content"
+                        placeholder="매장 후기를 남겨주세요!"></textarea>
+                </div>
+            </div>
+    
+    <div class="modal-foot">
+       	<input class="ReviewBtn" type="submit" value="등록하기"/>
+    </div>
+    </div>
+    </form>
+
+</body>
+
+</html>
